@@ -66,9 +66,41 @@ public class EscapeRoom
     while (play)
     {
       /* TODO: get all the commands working */
-	  /* Your code here */
-    
+      /* Your code here */
+      String input = UserInput.getLine();
+      if ((input.equals("right")) || (input.equals("r"))) 
+      {
+        game.movePlayer(m, py);
+      } 
+      else if ((input.equals("left")) || (input.equals("r"))) 
+      {
+        game.movePlayer(-m, py);
+      } 
+      else if ((input.equals("up")) || (input.equals("u"))) 
+      {
+        game.movePlayer(px, -m);
+      } 
+      else if ((input.equals("down")) || (input.equals("d"))) 
+      {
+        game.movePlayer(px, m);
+      } 
       
+      else if ((input.equals("jump")) || (input.equals("jr")))
+      {
+        game.movePlayer(2 * m, py);
+      }
+      else if ((input.equals("jumpleft")) || (input.equals("jl")))
+      {
+        game.movePlayer(2 * -m, py);
+      }
+      else if ((input.equals("jumpup")) || (input.equals("ju")))
+      {
+        game.movePlayer(px, 2 * -m);
+      }
+      else if ((input.equals("jumpdown")) || (input.equals("jd")))
+      {
+        game.movePlayer(px, 2 * m);
+      }
     }
 
   
